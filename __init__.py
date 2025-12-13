@@ -9,9 +9,9 @@ bl_info = {
 }
 
 import bpy
-from .name_syncher import SynchDataNameUseCase
+from name_synch import CLASSES as NAME_SYNCH_CLASSES
 
-classes = (SynchDataNameUseCase,)
+classes = (NAME_SYNCH_CLASSES,)
 
 
 def register():

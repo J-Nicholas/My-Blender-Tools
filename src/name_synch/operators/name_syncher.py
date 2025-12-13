@@ -1,5 +1,6 @@
 import bpy
-from . constants import SynchOperatorConstants
+from ..helpers.constants import SynchOperatorConstants
+
 
 # Synchs the data names to match the name of the object
 class SynchDataNameUseCase(bpy.types.Operator):
