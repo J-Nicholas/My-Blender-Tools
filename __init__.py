@@ -13,9 +13,11 @@ from .name_syncher import SynchDataNameUseCase
 
 classes = (SynchDataNameUseCase,)
 
+
 def register():
     for clazz in classes:
         bpy.utils.register_class(clazz)
+
 
 def unregister():
     for clazz in classes:
