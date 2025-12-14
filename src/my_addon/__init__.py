@@ -9,16 +9,20 @@ bl_info = {
 }
 
 import bpy
-from .blender import CLASSES as NAME_SYNCH_CLASSES
+from .blender import SynchDataNameOperator, RiggingPanel
 
-classes = NAME_SYNCH_CLASSES
+# classes = NAME_SYNCH_CLASSES
 
 
 def register():
-    for clazz in classes:
-        bpy.utils.register_class(clazz)
+    bpy.utils.register_class(SynchDataNameOperator)
+    bpy.utils.register_class(RiggingPanel)
+    # for clazz in classes:
+    # bpy.utils.register_class(clazz)
 
 
 def unregister():
-    for clazz in classes:
-        bpy.utils.unregister_class(clazz)
+    bpy.utils.unregister_class(RiggingPanel)
+    bpy.utils.unregister_class(SynchDataNameOperator)
+    # for clazz in classes:
+    #     bpy.utils.unregister_class(clazz)

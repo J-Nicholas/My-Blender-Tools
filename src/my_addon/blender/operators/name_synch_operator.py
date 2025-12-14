@@ -6,6 +6,7 @@ from ...helpers.constants import SynchOperatorConstants
 class SynchDataNameOperator(bpy.types.Operator):
     bl_idname = SynchOperatorConstants.ID
     bl_label = SynchOperatorConstants.LABEL
+    bl_description = "Will iterate through all selected objects and will rename the name of the data object to match the object's name"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
