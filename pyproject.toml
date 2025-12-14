@@ -1,0 +1,24 @@
+[project]
+name = "my-addon"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Johnathan Nicholas", email = "jtnicholas2014@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fake-bpy-module (>=20251003,<20251004)"
+]
+
+[tool.poetry]
+packages = [{include = "my_addon", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)"
+]

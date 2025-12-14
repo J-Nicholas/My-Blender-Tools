@@ -1,9 +1,9 @@
 import bpy
-from ..helpers.constants import SynchOperatorConstants
+from ...helpers.constants import SynchOperatorConstants
 
 
 # Synchs the data names to match the name of the object
-class SynchDataNameUseCase(bpy.types.Operator):
+class SynchDataNameOperator(bpy.types.Operator):
     bl_idname = SynchOperatorConstants.id
     bl_label = SynchOperatorConstants.label
     bl_options = {"REGISTER", "UNDO"}

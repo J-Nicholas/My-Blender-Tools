@@ -9,7 +9,7 @@ bl_info = {
 }
 
 import bpy
-from name_synch import CLASSES as NAME_SYNCH_CLASSES
+from blender import CLASSES as NAME_SYNCH_CLASSES
 
 classes = (NAME_SYNCH_CLASSES,)
 
