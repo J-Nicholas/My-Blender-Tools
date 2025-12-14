@@ -9,9 +9,15 @@ bl_info = {
 }
 
 import bpy
-from blender import CLASSES as NAME_SYNCH_CLASSES
 
-classes = (NAME_SYNCH_CLASSES,)
+classes = []
+try:
+    from .blender import CLASSES as NAME_SYNCH_CLASSES
+
+    classes = [NAME_SYNCH_CLASSES]
+except AttributeError:
+    # pytest run, it can't resolve bpy things because it's just a fake module
+    pass
 
 
 def register():
